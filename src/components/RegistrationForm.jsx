@@ -7,6 +7,7 @@ export default function RegistrationForm() {
     uid: '',
     ign: '',
     whatsapp: '',
+    email: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -64,6 +65,8 @@ export default function RegistrationForm() {
       errors.uid = 'UID must be 9–12 digits (numbers only).';
     if (!formData.ign.trim())
       errors.ign = 'In-game name is required.';
+    if (!/^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$/.test(formData.email.trim()))
+      errors.email = 'Enter a valid email address.';
     if (!/^\+?[0-9]{10,15}$/.test(formData.whatsapp.trim()))
       errors.whatsapp = 'Enter a valid WhatsApp number (e.g. +919876543210).';
     return errors;
@@ -124,6 +127,7 @@ export default function RegistrationForm() {
       uid: '',
       ign: '',
       whatsapp: '',
+      email: '',
     });
     setFieldErrors({});
   };
@@ -266,6 +270,34 @@ export default function RegistrationForm() {
                   <p className="text-[10px] text-red-400 mt-1 flex items-center gap-1">
                     <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
                     {fieldErrors.ign}
+                  </p>
+                )}
+              </div>
+
+              {/* Email Address */}
+              <div className="space-y-1.5">
+                <label className="block font-display text-[10px] md:text-xs font-bold tracking-wider text-gold-primary uppercase">
+                  Email Address
+                </label>
+                <div className={`relative flex items-center bg-dark-input border rounded-lg input-glow-focus transition-all duration-300 ${fieldErrors.email ? 'border-red-500/60' : 'border-white/5'}`}>
+                  <span className="pl-3 text-gray-500 flex items-center">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 12H8m0 0l4-4m-4 4l4 4" />
+                    </svg>
+                  </span>
+                  <input
+                    type="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Enter your email"
+                    className="w-full bg-transparent border-none py-3 px-3 text-sm text-white placeholder-white/20 outline-none"
+                  />
+                </div>
+                {fieldErrors.email && (
+                  <p className="text-[10px] text-red-400 mt-1 flex items-center gap-1">
+                    <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                    {fieldErrors.email}
                   </p>
                 )}
               </div>
