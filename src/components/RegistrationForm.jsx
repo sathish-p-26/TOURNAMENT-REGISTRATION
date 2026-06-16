@@ -94,7 +94,7 @@ export default function RegistrationForm() {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("http://localhost:5678/webhook/tournament-register", {
+      const res = await fetch("http://localhost:5678/webhook/team_form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
