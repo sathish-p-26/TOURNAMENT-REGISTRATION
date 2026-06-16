@@ -109,7 +109,6 @@ export default function RegistrationForm() {
       }
 
       setSubmitSuccess(true);
-      resetForm();
 
     } catch (err) {
       setSubmitError("Failed to submit. Check webhook.");
@@ -126,7 +125,7 @@ export default function RegistrationForm() {
       ign: '',
       whatsapp: '',
     });
-    setSubmitSuccess(false);
+    setFieldErrors({});
   };
 
   return (
@@ -166,7 +165,7 @@ export default function RegistrationForm() {
             <div className="flex flex-col gap-3 w-full">
               <button
                 type="button"
-                onClick={resetForm}
+                onClick={() => { resetForm(); setSubmitSuccess(false); }}
                 className="w-full py-3.5 bg-white/5 border border-white/10 hover:border-gold-primary hover:text-gold-primary text-sm font-display font-bold uppercase rounded-lg tracking-wider transition-all duration-300 active:scale-95"
               >
                 REGISTER ANOTHER SQUAD

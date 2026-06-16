@@ -50,11 +50,11 @@ export default function TournamentDetails() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-black/45 border border-white/5 rounded-xl p-4 md:min-w-[400px]">
             <div className="text-center">
               <span className="block text-[10px] text-gray-500 font-display font-bold uppercase">Date</span>
-              <span className="text-sm font-semibold text-white">25 June 2026</span>
+              <span className="text-sm font-semibold text-white">-- ---- 2026</span>
             </div>
             <div className="text-center border-l border-white/5">
               <span className="block text-[10px] text-gray-500 font-display font-bold uppercase">Time</span>
-              <span className="text-sm font-semibold text-white">7:00 PM IST</span>
+              <span className="text-sm font-semibold text-white">--:-- PM IST</span>
             </div>
             <div className="text-center border-l border-white/5">
               <span className="block text-[10px] text-gray-500 font-display font-bold uppercase">Map</span>
@@ -85,7 +85,7 @@ export default function TournamentDetails() {
                 </span>
               </div>
               <span className="text-base md:text-lg font-display font-black text-gray-300 mt-3">
-                ₹5,000
+                ₹----
               </span>
             </div>
 
@@ -101,7 +101,7 @@ export default function TournamentDetails() {
                 </span>
               </div>
               <span className="text-lg md:text-xl font-display font-black text-neon-yellow mt-4">
-                ₹10,000
+                ₹----
               </span>
             </div>
 
@@ -114,7 +114,7 @@ export default function TournamentDetails() {
                 </span>
               </div>
               <span className="text-base md:text-lg font-display font-black text-amber-600 mt-3">
-                ₹2,500
+                ₹----
               </span>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function TournamentDetails() {
                 <span className="absolute -left-[23px] top-1.5 w-2.5 h-2.5 rounded-full bg-red-500 border-2 border-dark-bg shadow-[0_0_10px_rgba(239,68,68,0.5)]"></span>
                 <div className="flex justify-between items-center">
                   <span className="text-xs font-semibold text-white">Registration Close</span>
-                  <span className="text-xs font-display font-bold text-red-400">6:30 PM</span>
+                  <span className="text-xs font-display font-bold text-red-400">-:-- PM</span>
                 </div>
               </div>
               
@@ -141,7 +141,7 @@ export default function TournamentDetails() {
                 <span className="absolute -left-[23px] top-1.5 w-2.5 h-2.5 rounded-full bg-gold-primary border-2 border-dark-bg shadow-[0_0_10px_rgba(207,168,59,0.5)]"></span>
                 <div className="flex justify-between items-center">
                   <span className="text-xs font-semibold text-white">Room ID & Pass Release</span>
-                  <span className="text-xs font-display font-bold text-gold-primary">6:45 PM</span>
+                  <span className="text-xs font-display font-bold text-gold-primary">-:-- PM</span>
                 </div>
               </div>
               
@@ -150,7 +150,7 @@ export default function TournamentDetails() {
                 <span className="absolute -left-[23px] top-1.5 w-2.5 h-2.5 rounded-full bg-neon-yellow border-2 border-dark-bg shadow-[0_0_10px_rgba(230,255,0,0.5)]"></span>
                 <div className="flex justify-between items-center">
                   <span className="text-xs font-semibold text-white">Match Start</span>
-                  <span className="text-xs font-display font-bold text-neon-yellow">7:00 PM</span>
+                  <span className="text-xs font-display font-bold text-neon-yellow">-:-- PM</span>
                 </div>
               </div>
             </div>
@@ -169,19 +169,19 @@ export default function TournamentDetails() {
           <div className="sm:col-span-2 space-y-3">
             <div className="flex justify-between items-end text-xs">
               <span className="text-gray-400 font-semibold uppercase">Lobby Capacity</span>
-              <span className="font-display font-bold text-white"><span className="text-neon-yellow">84</span> / 100 Teams</span>
+              <span className="font-display font-bold text-white"><span className="text-neon-yellow">0</span> / 100 Teams</span>
             </div>
             
             {/* Progress bar container */}
             <div className="h-2 w-full bg-black/60 rounded-full overflow-hidden border border-white/5 p-[1px]">
               <div 
                 className="h-full bg-gradient-to-r from-gold-primary to-neon-yellow rounded-full transition-all duration-1000 shadow-[0_0_8px_rgba(230,255,0,0.4)]"
-                style={{ width: '84%' }}
+                style={{ width: '0%' }}
               ></div>
             </div>
             
             <div className="flex justify-between text-[10px] text-gray-500 font-semibold tracking-wider">
-              <span>LOBBY SLOTS: 16 AVAILABLE</span>
+              <span>LOBBY SLOTS: 100 AVAILABLE</span>
               <span>STATUS: REGISTRATION ACTIVE</span>
             </div>
           </div>
@@ -195,7 +195,7 @@ export default function TournamentDetails() {
               {/* Days */}
               <div className="text-center">
                 <span className="font-display font-extrabold text-lg md:text-xl text-white block w-7">
-                  {String(timeLeft.days).padStart(2, '0')}
+                  --
                 </span>
                 <span className="text-[7px] text-gray-500 font-bold uppercase block tracking-wider mt-0.5">Days</span>
               </div>
@@ -204,7 +204,7 @@ export default function TournamentDetails() {
               {/* Hours */}
               <div className="text-center">
                 <span className="font-display font-extrabold text-lg md:text-xl text-neon-yellow block w-7">
-                  {String(timeLeft.hours).padStart(2, '0')}
+                  --
                 </span>
                 <span className="text-[7px] text-gray-500 font-bold uppercase block tracking-wider mt-0.5">Hrs</span>
               </div>
@@ -213,7 +213,7 @@ export default function TournamentDetails() {
               {/* Minutes */}
               <div className="text-center">
                 <span className="font-display font-extrabold text-lg md:text-xl text-neon-yellow block w-7">
-                  {String(timeLeft.minutes).padStart(2, '0')}
+                  --
                 </span>
                 <span className="text-[7px] text-gray-500 font-bold uppercase block tracking-wider mt-0.5">Min</span>
               </div>
@@ -222,7 +222,7 @@ export default function TournamentDetails() {
               {/* Seconds */}
               <div className="text-center">
                 <span className="font-display font-extrabold text-lg md:text-xl text-gold-primary block w-7">
-                  {String(timeLeft.seconds).padStart(2, '0')}
+                  --
                 </span>
                 <span className="text-[7px] text-gray-500 font-bold uppercase block tracking-wider mt-0.5">Sec</span>
               </div>

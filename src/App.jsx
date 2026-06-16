@@ -53,7 +53,7 @@ export default function App() {
             {/* Left side text intro for tablet view since hero panel is hidden */}
             <div className="lg:col-span-5 space-y-4 lg:hidden text-center sm:text-left">
               <span className="px-3 py-1 bg-neon-yellow/10 border border-neon-yellow/20 rounded-md text-[10px] font-display font-semibold tracking-wider text-neon-yellow uppercase">
-                LOBBY ID: #FF-VLH06
+                LOBBY ID: #-------
               </span>
               <h2 className="font-display text-2.5xl font-extrabold uppercase text-white tracking-normal leading-tight">
                 Join The <span className="text-neon-yellow drop-shadow-[0_0_12px_rgba(230,255,0,0.3)]">Ultimate</span> Battle

@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="flex items-center gap-4">
         {/* Instagram */}
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/itx._.jacker_?igsh=aWNwaDR4d3Bvc3lt"
           target="_blank"
           rel="noreferrer"
           aria-label="Follow VLH on Instagram"
@@ -25,20 +25,6 @@ export default function Footer() {
           <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
             <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" />
-          </svg>
-        </a>
-
-        {/* YouTube */}
-        <a
-          href="https://youtube.com"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Subscribe to VLH on YouTube"
-          className="w-9 h-9 rounded-lg bg-white/2 border border-white/5 hover:border-red-500 hover:text-red-500 text-gray-400 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 active:scale-95"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z" />
-            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
           </svg>
         </a>
 
@@ -57,7 +43,7 @@ export default function Footer() {
 
         {/* WhatsApp */}
         <a
-          href="https://whatsapp.com"
+          href="https://chat.whatsapp.com/DdlGCGvz6Hq2905bwNvU5f?mode=gi_t"
           target="_blank"
           rel="noreferrer"
           aria-label="Contact VLH on WhatsApp"
