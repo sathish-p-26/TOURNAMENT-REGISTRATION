@@ -94,7 +94,7 @@ export default function RegistrationForm() {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("https://n8n-latest-s0yo.onrender.com/webhook/team_form", {
+      const res = await fetch("http://localhost:5678/webhook/tournament-register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
