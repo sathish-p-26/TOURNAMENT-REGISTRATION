@@ -137,7 +137,7 @@ export default function HeroSection() {
         {/* Quick specs pill boxes */}
         <div className="flex flex-wrap gap-3 mt-6">
           <span className="px-3 py-1.5 bg-black/40 border border-white/5 rounded-md text-[11px] font-display font-semibold tracking-wider text-gold-primary uppercase">
-            🏆 ₹17,500 Pool
+            🏆 ₹----- Pool
           </span>
           <span className="px-3 py-1.5 bg-black/40 border border-white/5 rounded-md text-[11px] font-display font-semibold tracking-wider text-neon-yellow uppercase">
             🗺️ Bermuda Map
@@ -156,7 +156,7 @@ export default function HeroSection() {
         </div>
         <div className="w-[1px] h-8 bg-white/10"></div>
         <div className="flex flex-col">
-          <span className="font-display text-white text-lg font-extrabold">25 Jun</span>
+          <span className="font-display text-white text-lg font-extrabold">-- Jun</span>
           <span className="text-[10px] text-gray-400 font-semibold tracking-wider uppercase mt-0.5">Battle Date</span>
         </div>
         <div className="w-[1px] h-8 bg-white/10"></div>
