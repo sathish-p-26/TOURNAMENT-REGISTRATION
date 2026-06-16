@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #08080a;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  /* Scrollbar styles for modern dark UI */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #08080a;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #22222a;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #cfa83b;
+  }
+
+  /* Glassmorphism Panels */
+  .glass-card {
+    background: rgba(14, 14, 18, 0.65);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card-hover:hover {
+    border-color: rgba(230, 255, 0, 0.15);
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.55), 0 0 30px rgba(230, 255, 0, 0.03);
+  }
+
+  /* Custom Input Focus Glows */
+  .input-glow-focus:focus-within {
+    border-color: rgba(230, 255, 0, 0.25);
+    box-shadow: 0 0 15px rgba(230, 255, 0, 0.08);
+  }
+
+  /* Custom Checkbox */
+  .custom-checkbox {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+
+  .custom-checkbox:hover input ~ .checkmark {
+    border-color: #cfa83b;
+  }
+
+  .custom-checkbox input:checked ~ .checkmark {
+    background-color: #cfa83b;
+    border-color: #cfa83b;
+    box-shadow: 0 0 8px rgba(207, 168, 59, 0.4);
+  }
+
+  .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 4.5px;
+    top: 1.5px;
+    width: 4px;
+    height: 8px;
+    border: solid black;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+  }
+
+  .custom-checkbox input:checked ~ .checkmark::after {
+    display: block;
+  }
+  
+  /* Primary Glowing CTA Button animations */
+  .glow-btn-glow {
+    position: relative;
+    background: linear-gradient(135deg, #cfa83b 0%, #e6ff00 100%);
+    box-shadow: 0 0 0 rgba(230, 255, 0, 0);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  }
+
+  .glow-btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(230, 255, 0, 0.3), 0 0 12px rgba(207, 168, 59, 0.2);
+  }
+
+  .glow-btn-glow:active {
+    transform: translateY(0);
+  }
+}
